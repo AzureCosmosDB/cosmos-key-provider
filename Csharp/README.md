@@ -6,6 +6,8 @@ The goal is to eliminate control-plane (ARM) “thundering herd” when retrievi
 
 ## Quick start
 
+Install the **.NET 10 SDK (LTS)**. The library, harness, and tests all target `net10.0`.
+
 1) Configure the harness by editing:
 
 - `samples/CosmosKeyProvider.Harness/appsettings.json`
