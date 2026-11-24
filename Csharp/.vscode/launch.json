@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build-harness",
-      "program": "${workspaceFolder}/samples/CosmosKeyProvider.Harness/bin/Debug/net9.0/CosmosKeyProvider.Harness.dll",
+      "program": "${workspaceFolder}/samples/CosmosKeyProvider.Harness/bin/Debug/net10.0/CosmosKeyProvider.Harness.dll",
       "args": [],
       "cwd": "${workspaceFolder}/samples/CosmosKeyProvider.Harness",
       "console": "integratedTerminal",

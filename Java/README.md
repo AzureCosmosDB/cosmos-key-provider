@@ -6,8 +6,8 @@ This is for **Cosmos DB REST callers** (not the Cosmos Java data-plane SDK). It 
 
 ## Prereqs
 
-- Java 21+
-- Maven
+- JDK 25 LTS to build; Java 25 or later to run the JAR.
+- Maven 3.9.0 or later. Set `JAVA_HOME` to the JDK and check `mvn -version` reports Java 25.
 - (If using ARM key retrieval) an Azure identity with RBAC permission:
   - `Microsoft.DocumentDB/databaseAccounts/listKeys/action`
 
@@ -106,7 +106,7 @@ This repo includes a ready-to-run VS Code debug configuration for the harness.
 ### Prereqs
 
 - VS Code extension: **Extension Pack for Java** (or equivalent Java debugging support)
-- Java 21+
+- JDK 25 LTS
 
 ### Steps
 

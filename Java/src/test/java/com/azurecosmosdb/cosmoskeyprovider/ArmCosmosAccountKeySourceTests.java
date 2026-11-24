@@ -1,5 +1,6 @@
 package com.azurecosmosdb.cosmoskeyprovider;
 
+import com.azure.core.credential.TokenCredential;
 import com.azure.resourcemanager.cosmos.fluent.models.DatabaseAccountListKeysResultInner;
 import com.azure.resourcemanager.cosmos.models.DatabaseAccountListKeysResult;
 import org.junit.jupiter.api.Test;
@@ -7,6 +8,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ArmCosmosAccountKeySourceTests {
+  @Test
+  void constructsArmKeySourceWithoutRequestingToken() {
+    TokenCredential credential = context -> fail("ARM client construction must not request a token");
+
+    assertDoesNotThrow(() -> new ArmCosmosAccountKeySource(
+        credential, "test-tenant", "test-subscription", "test-group", "test-account"));
+  }
+
   @Test
   void toCosmosAccountKeys_mapsPrimaryAndSecondary() {
     DatabaseAccountListKeysResult result = new DatabaseAccountListKeysResult() {
